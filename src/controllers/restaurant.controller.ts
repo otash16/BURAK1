@@ -1,9 +1,10 @@
 import {Request, Response} from "express";
 import {T} from "../libs/types/common";
+import MemberService from "../models/Member.service"
 
-const memberController: T={};
+const restaurantController: T={};
 
-memberController.goHome = (req: Request, res: Response) =>{
+restaurantController.goHome = (req: Request, res: Response) =>{
     try{
         res.send("Home Page");
     }
@@ -12,7 +13,7 @@ memberController.goHome = (req: Request, res: Response) =>{
     }
 }
 
-memberController.login = (req: Request, res: Response) =>{
+restaurantController.login = (req: Request, res: Response) =>{
     try{
         res.send("Login page");
     }
@@ -21,7 +22,7 @@ memberController.login = (req: Request, res: Response) =>{
     }
 }
 
-memberController.signup = (req: Request, res: Response) =>{
+restaurantController.signup = (req: Request, res: Response) =>{
     try{
         res.send("Signup page");
     }
@@ -30,4 +31,4 @@ memberController.signup = (req: Request, res: Response) =>{
     }
 }
 
-export default memberController;
+export default restaurantController;
