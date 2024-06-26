@@ -1,8 +1,5 @@
-console.log("Hello World!");
+import dotenv from "dotenv";
+dotenv.config();
 
-import moment from "moment";
-
-const currentTime = moment().format('HH:DD:MM:YYYY');
-console.log(currentTime);
-
-const person: string = "Martin";
+console.log("PORT:", process.env.PORT);
+console.log("MOGO URL: ",process.env.MONGO_URL);
