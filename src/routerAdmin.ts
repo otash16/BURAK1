@@ -1,10 +1,18 @@
 import express, {Request, Response} from "express";
 const router = express.Router();
-import memberController from "./controllers/member.controller";
+import restaurantController from "./controllers/restaurant.controller";
+/** RESTAURANT **/
+router.get("/",restaurantController.goHome);
 
-router.get("/",memberController.goHome);
+router.get("/login" ,restaurantController.login);
+router.post("/login/processs" ,restaurantController.processlogin);
 
-router.get("/login" ,memberController.login);
+router.get("/signup" , restaurantController.signup);
+router.post("/signup/process" ,restaurantController.processlogin);
 
-router.get("/signup" , memberController.signup);
+
+/** PRODUCT **/
+
+/** USER **/
+
 export default router;
